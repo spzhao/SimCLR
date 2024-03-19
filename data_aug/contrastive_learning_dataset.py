@@ -19,6 +19,7 @@ class ContrastiveLearningDataset:
                                               transforms.RandomGrayscale(p=0.2),
                                               GaussianBlur(kernel_size=int(0.1 * size)),
                                               transforms.ToTensor()])
+        print('data_transforms', type(data_transforms))
         return data_transforms
 
     def get_dataset(self, name, n_views):
